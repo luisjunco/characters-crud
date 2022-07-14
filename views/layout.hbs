@@ -1,39 +1,35 @@
-<!DOCTYPE html>
 <html lang="en">
 
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>{{title}}</title>
-      <link rel="stylesheet" href="/stylesheets/style.css" />
-   </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
 
-   <body>
+  <body>
 
-      <header id="header">
-         <h1>Characters CRUD</h1>
-         
-         <nav>
-            <a href="/characters">Characters</a> |
-            <a href="/characters/create">Create new character</a> ||
+    <header id="header">
+      <h1><a href="/">Characters CRUD</a></h1>
+      <nav>
+        <a href="/characters">Characters</a>
+        <a href="/characters/create">Create new character</a>
+        {{#if session.currentUser}}
+          <a href="/user-profile">User Profile</a>
+          <form id="logout-form" action="/logout" method="POST">
+            <button id="logout">Logout</button>
+          </form>
+        {{else}}
+          <a href="/signup">Register</a>
+          <a href="/login">Login</a>
+        {{/if}}
+      </nav>
+    </header>
 
-            <a href="/signup">Register</a> |
-            <a href="/login">Login</a> |
-            <a href="/user-profile">User Profile</a>
-         </nav>
+    {{{body}}}
 
-
-         {{#if session.currentUser}}
-            <form id="logout-form" action="/logout" method="POST">
-               <button>Logout</button>
-            </form>
-         {{/if}}
-      </header>
-
-      {{{body}}}
-
-      <script src="/js/script.js"></script>
-   </body>
+    <script src="/js/script.js"></script>
+  </body>
 
 </html>
