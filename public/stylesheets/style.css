@@ -4,16 +4,36 @@ body {
 }
  
 a {
-  color: #00b7ff;
+  color:#21505e;
   text-decoration: none;
   font-size: 1.5em;
+
 }
 
-nav a {
+a:hover{
+  color:rgb(177, 125, 29);
+}
+
+header a {
   display: inline-block;
-  color: #000;
+  color: rgb(255, 255, 255);
   margin: 1rem auto;
 }
+
+
+header h1>a {
+  color: orange;
+}
+
+header h1>a:hover {
+  color: orange;
+}
+
+nav a{
+margin-right: 30px;
+}
+
+
 
 form {
   margin: 30px auto;
@@ -81,7 +101,7 @@ ul li {
 
 #header {
   padding: 1rem;
-  background-color: #43a3e6;
+  background-color: #21505e;
   text-align: center;
 }
  
@@ -120,4 +140,37 @@ ul li {
  
 #logout-form button {
   width: 120px;
+}
+
+
+#logout,
+form button{
+  display: block;
+  margin: auto;
+  fill-opacity: 0;
+  border: 1px solid rgb(177, 125, 29);
+  color:rgb(177, 125, 29);
+  font-weight: 600;
+}
+
+
+#logout:hover,
+form button:hover{
+color: white;
+  background-color:  rgb(177, 125, 29);
+  border: 1px solid rgb(207, 207, 207);
+}
+
+/* #reloadLink{
+  color:#21505e;
+  font-weight: 600;
+}
+
+#reloadLink:hover{
+  color:rgb(177, 125, 29);
+} */
+
+
+.char-list section{
+  margin-top: 50px;
 }
