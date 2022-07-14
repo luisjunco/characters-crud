@@ -12,8 +12,18 @@
    <body>
 
       <header id="header">
-         <h1>Hello World</h1>
-            
+         <h1>Characters CRUD</h1>
+         
+         <nav>
+            <a href="/characters">Characters</a> |
+            <a href="/characters/create">Create new character</a> ||
+
+            <a href="/signup">Register</a> |
+            <a href="/login">Login</a> |
+            <a href="/user-profile">User Profile
+         </nav>
+
+
          {{#if session.currentUser}}
             <form id="logout-form" action="/logout" method="POST">
                <button>Logout</button>
